@@ -1,0 +1,236 @@
+/* ===========================================
+   Escape from Duxbury - Retro Adventure Styles
+   =========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e;
+    font-family: 'Courier New', monospace;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-container {
+    width: 800px;
+    background-color: #16213e;
+    border: 4px solid #0f3460;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+#game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0f3460;
+    border-bottom: 2px solid #e94560;
+}
+
+#game-header h1 {
+    font-size: 1.5rem;
+    color: #e94560;
+    text-shadow: 2px 2px 0 #000;
+}
+
+#game-controls button {
+    background-color: #1a1a2e;
+    color: #eee;
+    border: 2px solid #e94560;
+    padding: 5px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+#game-controls button:hover {
+    background-color: #e94560;
+    color: #fff;
+}
+
+/* Main Game Area */
+#game-main {
+    position: relative;
+    background-color: #000;
+}
+
+#game-canvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    cursor: crosshair;
+}
+
+#message-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-top: 2px solid #e94560;
+    padding: 15px 20px;
+    min-height: 60px;
+}
+
+#message-text {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #fff;
+}
+
+/* Inventory Panel */
+#inventory-panel {
+    background-color: #1a1a2e;
+    border-top: 2px solid #0f3460;
+    padding: 15px 20px;
+}
+
+#inventory-panel h2 {
+    font-size: 1rem;
+    color: #e94560;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#inventory-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    min-height: 50px;
+}
+
+.inventory-item {
+    background-color: #0f3460;
+    border: 2px solid #e94560;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.inventory-item:hover {
+    background-color: #e94560;
+    transform: scale(1.05);
+}
+
+.inventory-item.selected {
+    background-color: #e94560;
+    box-shadow: 0 0 10px #e94560;
+}
+
+/* Action Bar */
+#game-footer {
+    background-color: #0f3460;
+    border-top: 2px solid #e94560;
+    padding: 10px 20px;
+}
+
+#action-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.action-btn {
+    background-color: #1a1a2e;
+    color: #eee;
+    border: 2px solid #e94560;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #e94560;
+    color: #fff;
+}
+
+.action-btn.active {
+    background-color: #e94560;
+    color: #fff;
+    box-shadow: 0 0 10px #e94560;
+}
+
+/* Dialog Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #16213e;
+    border: 4px solid #e94560;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+}
+
+#dialog-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#dialog-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dialog-choice {
+    background-color: #1a1a2e;
+    color: #eee;
+    border: 2px solid #0f3460;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.dialog-choice:hover {
+    background-color: #0f3460;
+    border-color: #e94560;
+}
+
+/* Pixel art text effect */
+.pixel-text {
+    font-family: 'Courier New', monospace;
+    text-shadow: 
+        1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
+}

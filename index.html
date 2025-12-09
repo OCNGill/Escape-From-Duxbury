@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape from Duxbury</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <header id="game-header">
+            <h1>Escape from Duxbury</h1>
+            <div id="game-controls">
+                <button id="save-btn">Save</button>
+                <button id="load-btn">Load</button>
+            </div>
+        </header>
+        
+        <main id="game-main">
+            <canvas id="game-canvas" width="640" height="400"></canvas>
+            
+            <div id="message-box">
+                <p id="message-text">Welcome to Duxbury Harbor. The apocalypse has come and gone. Time to escape.</p>
+            </div>
+        </main>
+        
+        <aside id="inventory-panel">
+            <h2>Inventory</h2>
+            <ul id="inventory-list"></ul>
+        </aside>
+        
+        <footer id="game-footer">
+            <div id="action-bar">
+                <button class="action-btn" data-action="look">Look</button>
+                <button class="action-btn" data-action="take">Take</button>
+                <button class="action-btn" data-action="use">Use</button>
+                <button class="action-btn" data-action="talk">Talk</button>
+            </div>
+        </footer>
+        
+        <!-- Dialog Modal -->
+        <div id="dialog-modal" class="modal hidden">
+            <div class="modal-content">
+                <p id="dialog-text"></p>
+                <div id="dialog-choices"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/state.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/scenes.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
