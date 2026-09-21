@@ -89,8 +89,10 @@ const Game = (function() {
     // Handle mouse movement over canvas
     function handleMouseMove(e) {
         const rect = canvas.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+        // Scale client coords into canvas-space (canvas may be CSS-scaled to
+        // container width and/or rendered on a high-DPI display).
+        const x = (e.clientX - rect.left) * (canvas.width / rect.width);
+        const y = (e.clientY - rect.top) * (canvas.height / rect.height);
         
         // Check if mouse is over any hotspot
         hoveredHotspot = null;

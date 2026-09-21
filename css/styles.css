@@ -68,6 +68,10 @@ body {
 
 #game-canvas {
     display: block;
+    /* Fill the game-main container (was 640px fixed inside an 800px
+       container, leaving a black dead zone on the right). */
+    width: 100%;
+    height: auto;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     cursor: crosshair;
@@ -82,6 +86,8 @@ body {
     border-top: 2px solid #e94560;
     padding: 15px 20px;
     min-height: 60px;
+    /* The bar overlays the scene; canvas hotspot clicks must pass through. */
+    pointer-events: none;
 }
 
 #message-text {

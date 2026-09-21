@@ -231,11 +231,13 @@ const Renderer = (function() {
         });
         
         // === EXIT SIGNS ===
+        // Exit signs live ABOVE the message-bar overlay zone (y>=340 is covered
+        // by #message-box); hotspots match the visible sign positions.
         // Exit to downtown (left)
-        drawText('← Downtown', 10, 390, PALETTE.white, 14);
+        drawText('← Downtown', 10, 330, PALETTE.white, 14);
         hotspots.push({
             id: 'exit_downtown',
-            x: 0, y: 350,
+            x: 0, y: 290,
             width: 50, height: 50,
             name: 'Path to Downtown',
             description: 'A path leading to downtown Duxbury.',
@@ -244,10 +246,10 @@ const Renderer = (function() {
         });
         
         // Exit to forest (right)
-        drawText('Forest →', 560, 390, PALETTE.white, 14);
+        drawText('Forest →', 560, 330, PALETTE.white, 14);
         hotspots.push({
             id: 'exit_forest',
-            x: 590, y: 350,
+            x: 590, y: 290,
             width: 50, height: 50,
             name: 'Path to Forest',
             description: 'A path leading into the forest.',

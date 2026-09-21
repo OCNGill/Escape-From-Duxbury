@@ -1,0 +1,12 @@
+{
+  "repo": "Escape-From-Duxbury",
+  "updated": "2026-09-21",
+  "state": "playable prototype, scene 'harbor' complete; downtown/forest are stubs",
+  "last_change": "2026-09-21 layout/interaction fix: canvas fills container, exit signs+hotspots moved above message bar, pointer-events none on bar, client->canvas coordinate scaling in handleMouseMove",
+  "verification": "headless Chrome (puppeteer-core): hover->pointer cursor, exit click transitions harbor->downtown, save/load OK, zero console errors",
+  "known_debt": [
+    "Alex-Test-game.code-workspace deletion is an uncommitted pre-existing change (not this fix)",
+    "downtown and forest scenes are 'Coming Soon' stubs (renderer.js TODO)",
+    "inventory panel has fixed empty area below list"
+  ]
+}
