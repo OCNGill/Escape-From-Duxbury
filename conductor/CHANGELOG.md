@@ -1,1 +1,1 @@
-C:/Users/Gillsystems Laptop/source/repos/OCNGill/Escape-From-Duxbury/CHANGELOG.md
+../CHANGELOG.md
